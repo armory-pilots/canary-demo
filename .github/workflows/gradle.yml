@@ -26,6 +26,10 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew bootJar
+      - name: List Directory
+        run: ls -la
+      - name: List JARs
+        run: ls -la build/libs
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login to DockerHub
